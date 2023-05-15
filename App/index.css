@@ -1,0 +1,146 @@
+body {
+  background-color: rgb(183, 231, 244);
+}
+
+.customizer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  gap: 20px;
+}
+
+.umbrella-preview {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#logo {
+  width: 60px;
+  height: auto;
+  position: relative;
+  bottom: 15%;
+  left: 43%;
+}
+
+.headline {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.headline[text-size="low"] {
+  font-size: 20px;
+  margin: 10px 0 25px 0;
+}
+
+.umbrella-customization {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-preview {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 10px;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.color-swatch[value="pink"] {
+  background-color: rgb(244, 32, 131);
+  border: 3px solid rgb(239, 182, 225);
+}
+
+.color-swatch[value="blue"] {
+  background-color: rgb(0, 187, 255);
+  border: 3px solid rgb(158, 234, 244);
+}
+
+.color-swatch[value="yellow"] {
+  background-color: rgb(233, 197, 52);
+  border: 3px solid rgb(213, 213, 39);
+}
+
+.helper-text {
+  line-height: 2px;
+}
+
+.upload-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.upload-btn {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(0, 187, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: darkblue;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 160px 160px 160px 180px;
+  transform: translate(-50%, -50%);
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+.loader.upload-btn-loader {
+  margin: 7px 0px 0px 10px;
+  width: 13px;
+  height: 13px;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.cancel-icon {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}

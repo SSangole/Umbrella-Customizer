@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Umbrella Customizer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="customizer-container">
+      <div class="umbrella-preview">
+        <img
+          src="../img/Blue umbrella.png"
+          id="Umbrella-Preview"
+          alt="Umbrella Preview"
+        />
+        <img src="" id="logo" />
+        <img class="loader" src="../icons/loader_icon.svg" />
+      </div>
+      <div class="umbrella-customization">
+        <div class="headline">Custom Umbrella</div>
+        <div class="color-swatches">
+          <button
+            class="color-swatch"
+            value="pink"
+            onclick="changeClass({src: '../img/Pink umbrella.png', btn_color:'rgb(244, 32, 131)', bg_color:'#f2f2ff'})"
+          ></button>
+          <button
+            class="color-swatch"
+            value="blue"
+            onclick="changeClass({src: '../img/Blue umbrella.png', btn_color:'rgb(0, 187, 255)', bg_color:'rgb(183, 231, 244)'})"
+          ></button>
+          <button
+            class="color-swatch"
+            value="yellow"
+            onclick="changeClass({src: '../img/Yello umbrella.png', btn_color:'rgb(233, 197, 52)', bg_color:'rgb(243, 241, 178)'})"
+          ></button>
+        </div>
+        <div class="helper-text">
+          <div class="headline" text-size="low">Customize your umbrella</div>
+          <p>Upload a logo for an insatnt preview</p>
+          <p>.png and .jpg files only. Max file size is 5MB</p>
+        </div>
+        <form class="upload-btn">
+          <label for="upload">
+            <img
+              class="upload-icon"
+              src="../icons/upload_icon.svg"
+              alt="Upload Icon"
+            />
+            <img
+              class="loader upload-btn-loader"
+              src="../icons/loader_icon.svg"
+            />
+          </label>
+          <span id="filename">UPLOAD LOGO</span>
+          <span class="cancel-icon" onclick="resetFileInput()">&times;</span>
+          <input type="file" id="upload" />
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
